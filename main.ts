@@ -1,8 +1,9 @@
 /**
 * Provides access to basic micro:bit functionality.
 */
-//% weight=5 color=#0fbc11 icon="\uf113" block="Robot"
-namespace Robot {
+//% weight=5 color=#0fbc11 block="RamieRobota"
+namespace RamieRobota {
+
 
     const CMD_FWD = "do_przod"
     const CMD_LEFT = "w_lewo"
