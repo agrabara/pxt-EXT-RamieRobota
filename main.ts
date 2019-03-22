@@ -28,7 +28,7 @@ namespace RamieRobota {
 
     
     /**
-    * Podniesienie ramienia do gory
+    * Podniesienie ramienia robota do gory
     */
     //% block
     //% weight = 100
@@ -36,7 +36,52 @@ namespace RamieRobota {
         radio.sendValue(CMD_UP, 0)
     }
 
+    /**
+    * Opuszczenie ramienia robota na dol
+    */
+    //% block
+    //% weight = 100
+    export function RamieNaDol() {
+        radio.sendValue(CMD_DOWN, 0)
+    }
     
+    /**
+    * Otwiera szczeki chwytaka
+    */
+    //% block
+    //% weight = 100
+    export function OtworzSzczeki() {
+        radio.sendValue(CMD_OPEN, 0)
+    }
+
+    /**
+    * Zamyka szczeki chwytaka
+    */
+    //% block
+    //% weight = 100
+    export function ZamknijSzczeki() {
+        radio.sendValue(CMD_OPEN, 0)
+    }
+
+    /**
+    * Obraca ramie robota w lewo
+    */
+    //% block
+    //% weight = 100
+    export function RamieWLewo() {
+        radio.sendValue(CMD_LEFT, 0)
+    }
+
+
+    /**
+    * Obraca ramie robota w prawo
+    */
+    //% block
+    //% weight = 50
+    export function RamieWPrawo() {
+        radio.sendValue(CMD_RIGHT, 0)
+    }
+
 
     function SendDspVal(DspType: string, DspVal: string) {
         let SendStr = DspType + DspVal
