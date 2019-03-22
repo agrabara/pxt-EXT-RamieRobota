@@ -1,7 +1,7 @@
 /**
 * Provides access to basic micro:bit functionality.
 */
-//% weight=5 color=#0fbc11 icon=".\icon.png" block="RamieRobota"
+//% weight=5 color=#0fbc11 icon="icon.png" block="RamieRobota"
 namespace RamieRobota {
 
 
