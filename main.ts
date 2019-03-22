@@ -26,7 +26,7 @@ namespace RamieRobota {
 
     const LS_ACTIVE = 2
 
-    
+
     /**
     * Podniesienie ramienia robota do gory
     */
@@ -44,7 +44,7 @@ namespace RamieRobota {
     export function RamieNaDol() {
         radio.sendValue(CMD_DOWN, 0)
     }
-    
+
     /**
     * Otwiera szczeki chwytaka
     */
@@ -82,6 +82,59 @@ namespace RamieRobota {
         radio.sendValue(CMD_RIGHT, 0)
     }
 
+
+    /**
+    * Ustawia ramie w pozycji poczatkowej
+    */
+    //% block
+    //% weight = 100
+    export function InicjujRamieRobota() {
+        radio.sendValue(CMD_INIT, 0)
+    }
+
+
+    /**
+    * Kalibracja: Zmien serwo na kolejne
+    */
+    //% block
+    //% weight = 100
+    export function KalNastepneSerwo() {
+        radio.sendValue(CMD_NEXTSERVO, 0)
+    }
+
+
+
+    /**
+    * Kalibracja: Zwieksz kat obrotu serwa
+    */
+    //% block
+    //% weight = 100
+    export function KalZwiekszKat() {
+        radio.sendValue(CMD_INC_ANGLE, 0)
+    }
+
+
+
+    /**
+    * Kalibracja: Zmniejsz kat obrotu serwa
+    */
+    //% block
+    //% weight = 100
+    export function KalZmniejszKat() {
+        radio.sendValue(CMD_DEC_ANGLE, 0)
+    }
+
+
+    /**
+    * Zmiana Grupy radiowej na nowa na 60 sekund
+    * @param NowaGrupa  [0-255] Nowa grupa radiowa 
+    */
+    //% block
+    //% NowaGrupa.min=0 NowaGrupa.max=255
+    export function ZmianaRadioGroup(NowaGrupa: number) {
+        radio.sendValue(CMD_CHGGROUP, NowaGrupa)
+        radio.setGroup(NowaGrupa)
+    }
 
     function SendDspVal(DspType: string, DspVal: string) {
         let SendStr = DspType + DspVal
