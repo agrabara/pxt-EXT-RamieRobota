@@ -60,7 +60,7 @@ namespace RamieRobota {
     //% block
     //% weight = 100
     export function ZamknijSzczeki() {
-        radio.sendValue(CMD_OPEN, 0)
+        radio.sendValue(CMD_CLOSE, 0)
     }
 
     /**
